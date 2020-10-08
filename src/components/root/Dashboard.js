@@ -6,7 +6,6 @@ import ProductList from "../products/ProductList";
 export default class Dashboard extends Component {
   render() {
     return (
-      <div>
         <Row>
           <Col xs="3">
             <CategoryList />
@@ -15,7 +14,6 @@ export default class Dashboard extends Component {
             <ProductList />
           </Col>
         </Row>
-      </div>
     );
   }
 }

@@ -2,9 +2,9 @@ import React from 'react'
 
 const CategoryList = () => {
     return (
-        <div>
-            Categorylist
-        </div>
+        <>
+            <h3>Categorylist</h3>
+        </>
     )
 }
 
