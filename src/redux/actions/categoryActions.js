@@ -1,5 +1,4 @@
 import * as actionTypes from "./actionTypes";
-console.log(actionTypes)
 
 export const changeCategory = (category) => {
   return {
@@ -7,3 +6,19 @@ export const changeCategory = (category) => {
     payload: category,
   };
 };
+
+export const getCategoriesSuccess = (categories) => {
+  return {
+    type: actionTypes.GET_CATEGORIES_SUCCESS,
+    payload: categories,
+  };
+};
+
+export function getCategories() {
+  return function (dispatch) {
+    let url = "http://localhost:3000/categories";
+    return fetch(url)
+      .then((response) => response.json())
+      .then((result) => dispatch(getCategoriesSuccess(result)));
+  };
+}
