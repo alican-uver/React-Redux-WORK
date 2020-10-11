@@ -21,4 +21,4 @@ export function getCategories() {
       .then((response) => response.json())
       .then((result) => dispatch(getCategoriesSuccess(result)));
   };
-}
+};
